@@ -45,7 +45,7 @@ if [ -d /root/nvidia-driver$NVDRIVERVER.run ]; then
 	echo "This driver version already downloaded."
 	chmod a+x /root/nvidia-driver$NVDRIVERVER.run
 else
-	wget #NVDRIVERLINK -O /root/nvidia-driver$NVDRIVERVER.run
+	wget $NVDRIVERLINK -O /root/nvidia-driver$NVDRIVERVER.run
 	chmod a+x /root/nvidia-driver$NVDRIVERVER.run
 fi
 
