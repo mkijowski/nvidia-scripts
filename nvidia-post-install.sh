@@ -10,6 +10,8 @@
 ## This appears to solve an issue on some machines where the nvidia 
 ## driver does not start on boot (leaving slurm jobs hanging).
 
+CUDA="https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.105_418.39_linux.run"
+CUDAVER="10.1.105"
 
 # Check for root/sudo ( need root permissions )
 if [[ $EUID -ne 0 ]]; then
@@ -17,12 +19,18 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-
 #install pre-requisites 
 apt update && apt install -y \
    git
 
-
+# Get cuda
+if [ -f /root/cuda_$CUDAVER.run ]; then
+   chmod a+x /root/cuda_$CUDAVER.run   
+else
+   wget -O /root/cuda_$CUDAVER.run $CUDA
+   chmod a+x /root/cuda_$CUDAVER.run
+fi
+   
 # Get the cuda samples
 if [ -d /root/cuda-samples ]; then
    cd /root/cuda-samples
@@ -36,7 +44,7 @@ cd /root/cuda-samples/Samples/deviceQuery/
 make
 
 # If deviceQueuery succesfuly makes then add it to crontab
-if [-f /root/cuda-samples/Samples/deviceQuery/deviceQuery ]; then
+if [ -f /root/cuda-samples/Samples/deviceQuery/deviceQuery ]; then
 # Test if deviceQueuery is already in crontab
 #    crontab -l | grep -q deviceQ ||
 # If crontab containes deviceQ then nothing else happens
