@@ -23,7 +23,7 @@
   * `rm -r /var/lib/dkms/nvidia`
   * `apt purge 'nvidia.*'`
   * `apt purge dkms`
-* Run the following to install the driver
+* Run the following to install the driver (as `sudo`)
   * `apt install dkms`
   * `init 3` - screen should flash
   * Do the following ONLY IF you want a newer driver
