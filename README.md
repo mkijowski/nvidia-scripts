@@ -10,7 +10,7 @@
 * [nvinstall-Dell3530.sh](../blob/master/nvinstall-Dell3530.sh) - installation script
   to install pre-reqs and blacklist default graphics drivers in Ubuntu 18.04
  
-### NOTE: these scripts are note tested, please use at your own risk!
+### NOTE: these scripts are not tested, please use at your own risk!
 
 #Install on Dell 3530 with Quadro P600
 * Run nvinstall-Dell3530.sh with sudo.  This will download the NVIDIA driver
