@@ -12,7 +12,7 @@
  
 ### NOTE: these scripts are not tested, please use at your own risk!
 
-#Install on Dell 3530 with Quadro P600
+# Install on Dell 3530 with Quadro P600
 * Run nvinstall-Dell3530.sh with sudo.  This will download the NVIDIA driver
   to your root directory
 * Reboot your machine - DO NOT LOG IN
