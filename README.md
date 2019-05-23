@@ -26,8 +26,10 @@
 * Run the following to install the driver
   * `apt install dkms`
   * `init 3` - screen should flash
+  * Do the following ONLY IF you want a newer driver
   * `wget http://us.download.nvidia.com/XFree86/Linux-x86_64/418.74/NVIDIA-Linux-x86_64-418.74.run -O /root/nvidia-driver430-14.run`
 * Log in as root - `sudo su`
   * `cd ~` - change to root's home directory
+  * NOTE: change version of next line IF USING OLD DRIVER
   * `./NVIDIA-Linux-x86_64-430.14.run --no-cc-version-check`
   * `reboot`
