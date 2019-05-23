@@ -7,5 +7,7 @@
   installation scripts to download cuda-samples, build `deviceQuery` and add it
   to crontab @reboot.  This appears to fix an issue where the nvidia driver does
   not start, preventing some jobs from running
-
+* [nvinstall-Dell3530.sh](../blob/master/nvinstall-Dell3530.sh) - installation script
+  to install pre-reqs and blacklist default graphics drivers in Ubuntu 18.04
+ 
 ### NOTE: these scripts are note tested, please use at your own risk!
