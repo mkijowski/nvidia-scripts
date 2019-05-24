@@ -30,6 +30,7 @@
   * `wget http://us.download.nvidia.com/XFree86/Linux-x86_64/430.14/NVIDIA-Linux-x86_64-430.14.run -O /root/nvidia-driver430-14.run`
 * Log in as root - `sudo su`
   * `cd ~` - change to root's home directory
-  * NOTE: change version of next line IF USING OLD DRIVER
+  * NOTE: change version of next lines IF USING OLD DRIVER
+  * `chmod u+x NVIDIA-Linux-x86_64-430.14.run` - change execution permissions
   * `./NVIDIA-Linux-x86_64-430.14.run --no-cc-version-check`
   * `reboot`
